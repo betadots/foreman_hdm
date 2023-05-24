@@ -1,6 +1,6 @@
-# ForemanPluginTemplate
+# ForemanHdm
 
-*Introdction here*
+Browse hiera data for a given Host using [HDM](https://github.com/betadots/hdm) and the [HDM smart proxy plugin](https://github.com/betadots/smart_proxy_hdm).
 
 ## Installation
 
@@ -21,7 +21,7 @@ Fork and send a Pull Request. Thanks!
 
 ## Copyright
 
-Copyright (c) *year* *your name*
+Copyright (c) 2023 betadots GmbH
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

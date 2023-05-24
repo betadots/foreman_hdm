@@ -12,7 +12,7 @@ end
 
 # Tests
 namespace :test do
-  desc 'Test ForemanPluginTemplate'
+  desc 'Test ForemanHdm'
   Rake::TestTask.new(:foreman_hdm) do |t|
     test_dir = File.expand_path('../../test', __dir__)
     t.libs << 'test'
@@ -28,9 +28,9 @@ namespace :foreman_hdm do
     begin
       require 'rubocop/rake_task'
       RuboCop::RakeTask.new(:rubocop_foreman_hdm) do |task|
-        task.patterns = ["#{ForemanPluginTemplate::Engine.root}/app/**/*.rb",
-                         "#{ForemanPluginTemplate::Engine.root}/lib/**/*.rb",
-                         "#{ForemanPluginTemplate::Engine.root}/test/**/*.rb"]
+        task.patterns = ["#{ForemanHdm::Engine.root}/app/**/*.rb",
+                         "#{ForemanHdm::Engine.root}/lib/**/*.rb",
+                         "#{ForemanHdm::Engine.root}/test/**/*.rb"]
       end
     rescue
       puts 'Rubocop not loaded.'

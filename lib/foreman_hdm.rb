@@ -1,4 +1,4 @@
 require 'foreman_hdm/engine'
 
-module ForemanPluginTemplate
+module ForemanHdm
 end

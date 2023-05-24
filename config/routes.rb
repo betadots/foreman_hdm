@@ -1,9 +1,11 @@
-ForemanPluginTemplate::Engine.routes.draw do
-  get 'new_action', to: 'example#new_action', as: 'new_action'
-  get 'plugin_template_description', to: 'example#react_template_page_description'
-  get 'welcome', to: '/react#index', as: 'welcome'
+ForemanHdm::Engine.routes.draw do
+  constraints(id: %r{[^/]+}, host_id: %r{[^/]+}) do
+    resources :hosts, only: [], controller: '/hosts' do
+      resources :keys, only: [:index, :show]
+    end
+  end
 end
 
 Foreman::Application.routes.draw do
-  mount ForemanPluginTemplate::Engine, at: '/foreman_hdm'
+  mount ForemanHdm::Engine, at: '/foreman_hdm'
 end
