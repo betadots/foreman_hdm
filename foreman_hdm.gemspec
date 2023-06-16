@@ -16,6 +16,6 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = Gem::Requirement.new('>= 2.7')
 
-  s.add_development_dependency 'rubocop'
-  s.add_development_dependency 'rdoc'
+  s.add_development_dependency 'rubocop', '~> 1.52', '>= 1.52.1'
+  s.add_development_dependency 'rdoc', '~> 6.5'
 end
