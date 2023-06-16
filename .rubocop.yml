@@ -4,6 +4,9 @@ require:
   - rubocop-minitest
 
 AllCops:
+  DisplayStyleGuide: true
+  DisplayCopNames: true
+  ExtraDetails: true
   TargetRubyVersion: 2.5
   TargetRailsVersion: 6.0
   Exclude:
