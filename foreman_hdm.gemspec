@@ -16,6 +16,10 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = Gem::Requirement.new('>= 2.7')
 
+  s.add_development_dependency 'rake', '~> 13.0', '>= 13.0.6'
   s.add_development_dependency 'rubocop', '~> 1.52', '>= 1.52.1'
+  s.add_development_dependency 'rubocop-performance', '~> 1.18'
+  s.add_development_dependency 'rubocop-rails', '~> 2.19', '>= 2.19.1'
+  s.add_development_dependency 'rubocop-minitest', '~> 0.31.0'
   s.add_development_dependency 'rdoc', '~> 6.5'
 end
