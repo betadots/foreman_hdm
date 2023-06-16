@@ -45,3 +45,18 @@ end
 task :default do
   Rake::Task['rubocop'].execute
 end
+
+begin
+  require 'github_changelog_generator/task'
+rescue LoadError
+  # github_changelog_generator is an optional group
+else
+  GitHubChangelogGenerator::RakeTask.new :changelog do |config|
+    version = ForemanHdm::VERSION
+    config.future_release = "v#{version}" if /^\d+\.\d+.\d+$/.match?(version)
+    config.header = "# Changelog\n\nAll notable changes to this project will be documented in this file."
+    config.exclude_labels = %w[duplicate question invalid wontfix wont-fix skip-changelog]
+    config.user = 'betadots'
+    config.project = 'foreman_hdm'
+  end
+end
