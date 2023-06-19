@@ -1,13 +1,21 @@
+inherit_from: .rubocop_todo.yml
+
 require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-minitest
+  - rubocop-rake
 
 AllCops:
-  TargetRubyVersion: 2.5
+  DisplayStyleGuide: true
+  DisplayCopNames: true
+  ExtraDetails: true
+  TargetRubyVersion: 2.7
   TargetRailsVersion: 6.0
   Exclude:
     - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - '.vendor/**/*'
 
 Layout/ArgumentAlignment:
   EnforcedStyle: with_fixed_indentation
