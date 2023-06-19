@@ -32,7 +32,7 @@ namespace :foreman_hdm do
                          "#{ForemanHdm::Engine.root}/lib/**/*.rb",
                          "#{ForemanHdm::Engine.root}/test/**/*.rb"]
       end
-    rescue
+    rescue StandardError
       puts 'Rubocop not loaded.'
     end
 

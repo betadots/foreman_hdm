@@ -1,9 +1,9 @@
-require File.expand_path('../lib/foreman_hdm/version', __FILE__)
+require File.expand_path('lib/foreman_hdm/version', __dir__)
 
 Gem::Specification.new do |s|
   s.name        = 'foreman_hdm'
   s.version     = ForemanHdm::VERSION
-  s.metadata    = { "is_foreman_plugin" => "true" }
+  s.metadata    = { 'is_foreman_plugin' => 'true' }
   s.license     = 'GPL-3.0'
   s.authors     = ['betadots GmbH']
   s.email       = ['info@betadots.de']
@@ -17,9 +17,10 @@ Gem::Specification.new do |s|
   s.required_ruby_version = Gem::Requirement.new('>= 2.7')
 
   s.add_development_dependency 'rake', '~> 13.0', '>= 13.0.6'
+  s.add_development_dependency 'rdoc', '~> 6.5'
   s.add_development_dependency 'rubocop', '~> 1.52', '>= 1.52.1'
+  s.add_development_dependency 'rubocop-minitest', '~> 0.31.0'
   s.add_development_dependency 'rubocop-performance', '~> 1.18'
   s.add_development_dependency 'rubocop-rails', '~> 2.19', '>= 2.19.1'
-  s.add_development_dependency 'rubocop-minitest', '~> 0.31.0'
-  s.add_development_dependency 'rdoc', '~> 6.5'
+  s.add_development_dependency 'rubocop-rake', '~> 0.6.0'
 end

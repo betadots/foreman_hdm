@@ -25,7 +25,7 @@ module ForemanHdm
 
         # Add permissions
         security_block :foreman_hdm do
-          permission :view_foreman_hdm, { :'foreman_hdm/keys' => [:index, :show] }
+          permission :view_foreman_hdm, { :'foreman_hdm/keys' => %i[index show] }
         end
 
         # Add a new role called 'Discovery' if it doesn't exist

@@ -4,12 +4,13 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-minitest
+  - rubocop-rake
 
 AllCops:
   DisplayStyleGuide: true
   DisplayCopNames: true
   ExtraDetails: true
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.7
   TargetRailsVersion: 6.0
   Exclude:
     - 'node_modules/**/*'

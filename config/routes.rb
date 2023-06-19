@@ -1,7 +1,7 @@
 ForemanHdm::Engine.routes.draw do
   constraints(id: %r{[^/]+}, host_id: %r{[^/]+}) do
     resources :hosts, only: [], controller: '/hosts' do
-      resources :keys, only: [:index, :show]
+      resources :keys, only: %i[index show]
     end
   end
 end
