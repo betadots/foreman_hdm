@@ -1,15 +1,5 @@
 require 'rake/testtask'
 
-# Tasks
-namespace :foreman_hdm do
-  namespace :example do
-    desc 'Example Task'
-    task task: :environment do
-      # Task goes here
-    end
-  end
-end
-
 # Tests
 namespace :test do
   desc 'Test ForemanHdm'
@@ -24,7 +14,8 @@ namespace :test do
 end
 
 namespace :foreman_hdm do
-  task :rubocop do
+  desc 'Lint with rubocop'
+  task rubocop: :environment do
     begin
       require 'rubocop/rake_task'
       RuboCop::RakeTask.new(:rubocop_foreman_hdm) do |task|
