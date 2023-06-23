@@ -7,6 +7,8 @@ on:
 
 jobs:
   release:
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     if: github.repository_owner == 'betadots'
     steps:
