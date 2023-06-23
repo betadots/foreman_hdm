@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.4](https://github.com/betadots/foreman_hdm/tree/v0.1.4) (2023-06-23)
+
+[Full Changelog](https://github.com/betadots/foreman_hdm/compare/v0.1.3...v0.1.4)
+
+**Fixed bugs:**
+
+- package.json: Apply versions from foreman\_ansible [\#14](https://github.com/betadots/foreman_hdm/pull/14) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- document release process and add badges [\#13](https://github.com/betadots/foreman_hdm/pull/13) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [v0.1.3](https://github.com/betadots/foreman_hdm/tree/v0.1.3) (2023-06-23)
 
 [Full Changelog](https://github.com/betadots/foreman_hdm/compare/v0.1.2...v0.1.3)
