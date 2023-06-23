@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.2](https://github.com/betadots/foreman_hdm/tree/v0.1.2) (2023-06-23)
+
+[Full Changelog](https://github.com/betadots/foreman_hdm/compare/v0.1.1...v0.1.2)
+
+**Fixed bugs:**
+
+- GitHub Action: Grant read access to contents scope [\#9](https://github.com/betadots/foreman_hdm/pull/9) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [v0.1.1](https://github.com/betadots/foreman_hdm/tree/v0.1.1) (2023-06-23)
 
 [Full Changelog](https://github.com/betadots/foreman_hdm/compare/v0.1.0...v0.1.1)
