@@ -6,16 +6,44 @@
 [![RubyGem Version](https://img.shields.io/gem/v/foreman_hdm.svg)](https://rubygems.org/gems/foreman_hdm)
 [![RubyGem Downloads](https://img.shields.io/gem/dt/foreman_hdm.svg)](https://rubygems.org/gems/foreman_hdm)
 
-Browse hiera data for a given Host using [HDM](https://github.com/betadots/hdm) and the [HDM smart proxy plugin](https://github.com/betadots/foreman_hdm).
+Browse hiera data for a given Host using [HDM](https://github.com/betadots/hdm) and the [HDM smart proxy plugin](https://github.com/betadots/smart_proxy_hdm).
+
+## Requirement
+
+You must have a [HDM](https://github.com/betadots/hdm) installation running.
+If you are running with authentication enabled, you need an API user in HDM.
 
 ## Installation
 
 See [How_to_Install_a_Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Install_a_Plugin)
 for how to install Foreman plugins
 
+The most simple way is installing from packages (available with Foreman 3.6 and later)
+
+RedHat: `dnf install rubygem-foreman_hdm rubygem-smart_proxy_hdm`
+
+After installation you must initialize the database: `foreman-rake db:migrate`
+
+The HDM Smart Proxy must be configured:
+
+```yaml
+# /etc/foreman-proxy/settings.d/hdm.yml
+# HDM Smart Proxy
+:enabled: https
+:hdm_url: 'http://<HDM IP>:<HDM Port>'
+:hdm_user: '<HDM API User Email>'
+:hdm_password: '<HDM API User Password>'
+```
+
+Next you must restart the smart-proxy: `systemctl restart foreman-proxy`
+
 ## Usage
 
-*Usage here*
+Go to Foreman and Refresh the Smart Proxy features.
+
+Within the nodes or node groups you can now set the HDM Smart Proxy.
+
+When you now select a node, you will see an HDM tab.
 
 ## TODO
 
