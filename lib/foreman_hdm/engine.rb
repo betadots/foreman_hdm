@@ -31,7 +31,7 @@ module ForemanHdm
         # Add a new role called 'Discovery' if it doesn't exist
         role 'ForemanHdm', [:view_foreman_hdm]
 
-        smart_proxy_for Host, :hdm_proxy,
+        smart_proxy_for Host::Managed, :hdm_proxy,
           feature: 'Hdm',
           label: N_('HDM Proxy'),
           description: N_('Smart proxy to access HDM'),
