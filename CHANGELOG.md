@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.0.0](https://github.com/betadots/foreman_hdm/tree/v1.0.0) (2024-03-14)
+
+[Full Changelog](https://github.com/betadots/foreman_hdm/compare/v0.1.4...v1.0.0)
+
+**Implemented enhancements:**
+
+- Add Ruby 3.3 to CI matrix [\#29](https://github.com/betadots/foreman_hdm/pull/29) ([bastelfreak](https://github.com/bastelfreak))
+
+**Fixed bugs:**
+
+- Foreman HDM does not build on latest foreman version [\#26](https://github.com/betadots/foreman_hdm/issues/26)
+- Foreman unable to render site after hdm plugin installation [\#23](https://github.com/betadots/foreman_hdm/issues/23)
+- Add foreign key to hdm\_proxy\_id [\#28](https://github.com/betadots/foreman_hdm/pull/28) ([oneiros](https://github.com/oneiros))
+- Use specific `Host` class \#26 [\#27](https://github.com/betadots/foreman_hdm/pull/27) ([oneiros](https://github.com/oneiros))
+
+**Merged pull requests:**
+
+- Clarifiy license: GPL-3.0-\>GPL-3.0-only [\#30](https://github.com/betadots/foreman_hdm/pull/30) ([bastelfreak](https://github.com/bastelfreak))
+- Add installation documentation [\#25](https://github.com/betadots/foreman_hdm/pull/25) ([tuxmea](https://github.com/tuxmea))
+- Update rubocop-minitest requirement from ~\> 0.32.1 to ~\> 0.34.4 [\#22](https://github.com/betadots/foreman_hdm/pull/22) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update rubocop-minitest requirement from ~\> 0.31.0 to ~\> 0.32.1 [\#17](https://github.com/betadots/foreman_hdm/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.1.4](https://github.com/betadots/foreman_hdm/tree/v0.1.4) (2023-06-23)
 
 [Full Changelog](https://github.com/betadots/foreman_hdm/compare/v0.1.3...v0.1.4)
