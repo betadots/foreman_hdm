@@ -81,3 +81,7 @@ To make a new release, please do:
     * if required, add labels to unlabled PR/issues, regenerate the changelog
 * Create a PR with it
 * After it got merged, push a tag that's prefixed with `v`. GitHub Actions will do the actual release to Rubygems and GitHub Packages
+
+The Foreman team packages this gem as Debian package (deb) and as RedHat package
+(rpm). They have a bot that will automatically propose an rpm/deb update at
+[github.com/theforeman/foreman-packaging](https://github.com/theforeman/foreman-packaging/pulls).
