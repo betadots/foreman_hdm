@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name        = 'foreman_hdm'
   s.version     = ForemanHdm::VERSION
   s.metadata    = { 'is_foreman_plugin' => 'true' }
-  s.license     = 'GPL-3.0'
+  s.license     = 'GPL-3.0-only'
   s.authors     = ['betadots GmbH']
   s.email       = ['info@betadots.de']
   s.homepage    = 'https://github.com/betadots/foreman_hdm'
