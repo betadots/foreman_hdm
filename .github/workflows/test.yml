@@ -46,10 +46,17 @@ jobs:
       - name: Verify gem builds
         run: gem build --strict --verbose *.gemspec
 
+  foremanci:
+    name: Foreman Plugin tests
+    uses: theforeman/actions/.github/workflows/foreman_plugin.yml@v0
+    with:
+      plugin: foreman_hdm
+
   tests:
     needs:
       - rubocop
       - test
+      - foremanci
     runs-on: ubuntu-latest
     name: Test suite
     steps:
