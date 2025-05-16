@@ -16,26 +16,28 @@ module ForemanHdm
       end
     end
 
-    initializer 'foreman_hdm.register_plugin', :before => :finisher_hook do |_app|
-      Foreman::Plugin.register :foreman_hdm do
-        requires_foreman '>= 3.4.0'
+    initializer 'foreman_hdm.register_plugin', :before => :finisher_hook do |app|
+      app.reloader.to_prepare do
+        Foreman::Plugin.register :foreman_hdm do
+          requires_foreman '>= 3.13.0'
 
-        # Add Global files for extending foreman-core components and routes
-        register_global_js_file 'global'
+          # Add Global files for extending foreman-core components and routes
+          register_global_js_file 'global'
 
-        # Add permissions
-        security_block :foreman_hdm do
-          permission :view_foreman_hdm, { :'foreman_hdm/keys' => %i[index show] }
+          # Add permissions
+          security_block :foreman_hdm do
+            permission :view_foreman_hdm, { :'foreman_hdm/keys' => %i[index show] }
+          end
+
+          # Add a new role called 'Discovery' if it doesn't exist
+          role 'ForemanHdm', [:view_foreman_hdm]
+
+          smart_proxy_for Host::Managed, :hdm_proxy,
+            feature: 'Hdm',
+            label: N_('HDM Proxy'),
+            description: N_('Smart proxy to access HDM'),
+            api_description: N_('ID of HDM Proxy')
         end
-
-        # Add a new role called 'Discovery' if it doesn't exist
-        role 'ForemanHdm', [:view_foreman_hdm]
-
-        smart_proxy_for Host::Managed, :hdm_proxy,
-          feature: 'Hdm',
-          label: N_('HDM Proxy'),
-          description: N_('Smart proxy to access HDM'),
-          api_description: N_('ID of HDM Proxy')
       end
     end
 

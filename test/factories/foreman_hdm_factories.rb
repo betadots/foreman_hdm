@@ -1,5 +1,5 @@
-FactoryBot.define do
-  factory :host do
-    name 'foreman_hdm'
-  end
-end
+# FactoryBot.define do
+#  factory :host do
+#    sequence(:name) { |n| "host#{n}" }
+#  end
+# end

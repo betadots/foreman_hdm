@@ -2,7 +2,6 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-minitest
-  - rubocop-rake
 
 AllCops:
   DisplayStyleGuide: true
