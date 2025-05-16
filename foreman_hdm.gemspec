@@ -18,9 +18,10 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rake', '~> 13.0', '>= 13.0.6'
   s.add_development_dependency 'rdoc', '~> 6.5'
-  s.add_development_dependency 'rubocop', '~> 1.52', '>= 1.52.1'
-  s.add_development_dependency 'rubocop-minitest', '~> 0.36.0'
-  s.add_development_dependency 'rubocop-performance', '~> 1.18'
-  s.add_development_dependency 'rubocop-rails', '~> 2.19', '>= 2.19.1'
-  s.add_development_dependency 'rubocop-rake', '~> 0.6.0'
+  # loosen up dependencies, so it works with theforeman-rubocop
+  s.add_development_dependency 'rubocop', '>= 0.89.0', '< 2'
+  s.add_development_dependency 'rubocop-minitest', '>= 0.10.1', '< 2'
+  s.add_development_dependency 'rubocop-performance', '>= 1.8.1', '< 2'
+  s.add_development_dependency 'rubocop-rails', '>= 2.8.1', '< 3'
+  s.add_development_dependency 'rubocop-rake', '>= 0.5.1', '< 1'
 end
