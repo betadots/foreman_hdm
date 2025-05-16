@@ -18,7 +18,7 @@ module ForemanHdm
 
     initializer 'foreman_hdm.register_plugin', :before => :finisher_hook do |_app|
       Foreman::Plugin.register :foreman_hdm do
-        requires_foreman '>= 3.4.0'
+        requires_foreman '>= 3.14.0'
 
         # Add Global files for extending foreman-core components and routes
         register_global_js_file 'global'
