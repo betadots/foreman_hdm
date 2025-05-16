@@ -41,35 +41,32 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-      #- name: Run tests
-      #  run: bundle exec rake test
       - name: Verify gem builds
         run: gem build --strict --verbose *.gemspec
+
   foremanci:
     name: Foreman Plugin tests
+    strategy:
+      fail-fast: false
+      matrix:
+        foreman:
+          - development
+          - 3.15-stable
+          - 3.14-stable
+          - 3.13-stable
+          - 3.12-stable
+          - 3.11-stable
+          - 3.10-stable
     uses: theforeman/actions/.github/workflows/foreman_plugin.yml@v0
     with:
       plugin: foreman_hdm
-  foremanci314:
-    name: Foreman Plugin tests
-    uses: theforeman/actions/.github/workflows/foreman_plugin.yml@v0
-    with:
-      plugin: foreman_hdm
-      foreman_version: '3.14-stable'
-  foremanci313:
-    name: Foreman Plugin tests
-    uses: theforeman/actions/.github/workflows/foreman_plugin.yml@v0
-    with:
-      plugin: foreman_hdm
-      foreman_version: '3.13-stable'
+      foreman_version: ${{ matrix.foreman }}
 
   tests:
     needs:
       - rubocop
       - test
       - foremanci
-      - foremanci314
-      - foremanci313
     runs-on: ubuntu-latest
     name: Test suite
     steps:
