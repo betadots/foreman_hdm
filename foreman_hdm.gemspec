@@ -3,7 +3,7 @@ require File.expand_path('lib/foreman_hdm/version', __dir__)
 Gem::Specification.new do |s|
   s.name        = 'foreman_hdm'
   s.version     = ForemanHdm::VERSION
-  s.metadata    = { 'is_foreman_plugin' => 'true' }
+  s.metadata    = { 'is_foreman_plugin' => 'true', 'github_repo' => 'https://github.com/betadots/foreman_hdm' }
   s.license     = 'GPL-3.0-only'
   s.authors     = ['betadots GmbH']
   s.email       = ['info@betadots.de']

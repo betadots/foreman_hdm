@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.0](https://github.com/betadots/foreman_hdm/tree/v1.1.0) (2025-05-16)
+
+[Full Changelog](https://github.com/betadots/foreman_hdm/compare/v1.0.0...v1.1.0)
+
+**Implemented enhancements:**
+
+- CI: make matrix dynamic and test older versions [\#46](https://github.com/betadots/foreman_hdm/pull/46) ([bastelfreak](https://github.com/bastelfreak))
+- Add Foreman 3.13/3.14 support  [\#40](https://github.com/betadots/foreman_hdm/pull/40) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- Update rubocop-minitest requirement from ~\> 0.35.0 to ~\> 0.36.0 [\#38](https://github.com/betadots/foreman_hdm/pull/38) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Document rpm/deb build pipeline [\#32](https://github.com/betadots/foreman_hdm/pull/32) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [v1.0.0](https://github.com/betadots/foreman_hdm/tree/v1.0.0) (2024-03-14)
 
 [Full Changelog](https://github.com/betadots/foreman_hdm/compare/v0.1.4...v1.0.0)
