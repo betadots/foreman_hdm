@@ -45,11 +45,17 @@ jobs:
       #  run: bundle exec rake test
       - name: Verify gem builds
         run: gem build --strict --verbose *.gemspec
-
+  foremanci311:
+    name: Foreman Plugin tests
+    uses: theforeman/actions/.github/workflows/foreman_plugin.yml@v0
+    with:
+      plugin: foreman_hdm
+      foreman_version: '3.11-stable'
   tests:
     needs:
       - rubocop
       - test
+      - foremanci311
     runs-on: ubuntu-latest
     name: Test suite
     steps:
