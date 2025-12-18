@@ -17,6 +17,6 @@ Gem::Specification.new do |s|
   s.required_ruby_version = Gem::Requirement.new('>= 2.7')
 
   s.add_development_dependency 'rake', '~> 13.0', '>= 13.0.6'
-  s.add_development_dependency 'rdoc', '~> 6.5'
+  s.add_development_dependency 'rdoc', '~> 7.0'
   s.add_development_dependency 'theforeman-rubocop', '~> 0.1.2'
 end
