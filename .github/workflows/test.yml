@@ -58,7 +58,7 @@ jobs:
           - 3.12-stable
           - 3.11-stable
           - 3.10-stable
-    uses: theforeman/actions/.github/workflows/foreman_plugin.yml@v0
+    uses: theforeman/actions/.github/workflows/foreman_plugin.yml@v1
     with:
       plugin: foreman_hdm
       foreman_version: ${{ matrix.foreman }}
