@@ -52,12 +52,9 @@ jobs:
       matrix:
         foreman:
           - develop
+          - 3.17-stable
+          - 3.16-stable
           - 3.15-stable
-          - 3.14-stable
-          - 3.13-stable
-          - 3.12-stable
-          - 3.11-stable
-          - 3.10-stable
     uses: theforeman/actions/.github/workflows/foreman_plugin.yml@v1
     with:
       plugin: foreman_hdm
